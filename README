@@ -1,0 +1,69 @@
+*********************************************
+ * Chess (Java programming language)
+ * Devan Karsann
+*********************************************
+
+
+OVERVIEW:
+
+ This program allows the user to play chess against an AI who makes decisions based on a complex greedy best first search algorithm. Move sets with speicific qualification criteria are compiled. Priorities are assigned to these sets and the AI determines the best move for it to make based on the intersections of all of the move sets. Decisions by the AI are made instantenously.
+ 
+INCLUDED FILES:
+
+ * StartGame.java -   source file with main method
+ * ChessPiece.java -  source file
+ * Bishop.java -      source file
+ * King.java -        source file
+ * Knight.java -      source file
+ * Pawn.java -        source file
+ * Queen.java -       source file
+ * Rook.java -        source file
+ * Hyphen.java -      source file
+ * ChessBoard.java -  source file
+ * MoveCommand.java - source file
+ * Player.java -      source file
+ * README -           this file
+ 
+ An example of a correctly formatted text file for inputing the state of a chess board is shown below. Lowercase letters represent black piece, uppercase letters represent white pieces, knights are either 'n' or 'N', and hyphens are used to represent empty tiles on chess boards.
+
+   r n b q k b n r
+   p p p p p p p p
+   - - - - - - - -
+   - - - - - - - -
+   - - - - - - - -
+   - - - - - - - -
+   P P P P P P P P
+   R N B Q K B N R
+
+   
+COMPILING AND RUNNING:
+
+ This program can be run from within an IDE (Integrated Development Environment) which accommodates the Java programming language, or from the command line.
+ 
+ The following instructions are for command-line instructions in a Linux system.
+ 
+ From the directory containing all source files, compile both classes with the command:
+ $ javac *.java
+
+ Run the Solver class file with this command:
+ $ java StartGame
+ 
+ At the start of this program, the AI will wait for the user to enter a move. If the move is not valid, a helpful message will be printed to the console. If the move is valid, the AI will make its move and wait for the user's next move. This repeats until a checkmate board state is reached.
+
+
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+
+ Move commands entered by the user need to be five characters in the form [column name][row number][space][column name][row number]. Each move command corresponds to a starting and ending location on the chessboard. By default, the user is always white and the board is set to the default setup for Chess. Black sqaures on the chess board printed out are shown as a set of square brackets '[ ]'.
+
+ The AI is able to make very quick decisions based the immediate repercussions of its potential moves. The initially setup of the AI's algorithm took a lot of work but is very scalable and at this point it'll be easy to make its decision making process more complex.
+
+ 
+TESTING:
+
+ Errors were encountered when developing this program during the testing phase. One bug was found and fixed at a time until there were no issues when running the program. The current problems are logic issues with the AI decision making algorithm. However, it still performs well now and additional movesets will be added to make the AI play better. Code to check for draw chess board states and stalemates has not been added yet. This will be fixed in a later version of this project.
+
+ 
+DISCUSSION:
+ 
+ This project is the culmination of weeks of planning and several weekends of long coding sessions. The entire process was very enjoyable for me and I plan on continuing to improve the AI until it wins a majority of games it plays with humans. Machine learning topics will be visited in the future after a code refacter is done. AI's will play other instances of a new AI class and results will improve their playing ability.
+
